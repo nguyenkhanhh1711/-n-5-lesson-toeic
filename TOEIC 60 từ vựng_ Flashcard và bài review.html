@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>TOEIC 60 từ vựng: Flashcard và bài review</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Be+Vietnam+Pro:wght@500;700;800&display=swap">
+<style>
+:root{--bg:#fff;--ink:#1f3a4d;--blue:#8fd3ee;--bt:#2f90b8;--pale:#eaf6fb;--line:#bfe3f1;--coral:#e8586b;--gold:#f2c14e;--mut:#5d7384;--card:#fff;--ok:#1b8f61;--okbg:#dff5ea;--no:#d23f56;--nobg:#fde3e7;--sh:0 10px 28px rgba(60,140,180,.14);
+box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media(prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#0f1c27;--ink:#e9f4fa;--blue:#6fc0de;--bt:#8fd3ee;--pale:#17303f;--line:#2c5266;--mut:#9db6c5;--card:#142634;--ok:#6fe0ad;--okbg:#143a2b;--no:#ff8aa0;--nobg:#40202a;--sh:0 10px 28px rgba(0,0,0,.4)}}
+:root[data-theme="dark"]{--bg:#0f1c27;--ink:#e9f4fa;--blue:#6fc0de;--bt:#8fd3ee;--pale:#17303f;--line:#2c5266;--mut:#9db6c5;--card:#142634;--ok:#6fe0ad;--okbg:#143a2b;--no:#ff8aa0;--nobg:#40202a;--sh:0 10px 28px rgba(0,0,0,.4)}
+*{box-sizing:border-box;margin:0}
+html{scroll-behavior:smooth;scroll-padding-top:60px}
+body{font-family:"Be Vietnam Pro","Segoe UI",system-ui,sans-serif;font-weight:500;background:var(--bg);color:var(--ink);line-height:1.55;overflow-x:hidden}
+.bgf{position:fixed;z-index:0;left:-90px;bottom:-60px;width:300px;opacity:.16;pointer-events:none;transition:transform .2s linear}
+main{position:relative;z-index:1}
+#bar{position:fixed;z-index:20;left:0;top:0;height:4px;width:100%;background:var(--blue);transform-origin:left;transform:scaleX(0)}
+#top{position:fixed;z-index:19;top:calc(env(safe-area-inset-top,0px) + 8px);left:12px;right:12px;display:flex;justify-content:space-between;align-items:center;gap:8px;pointer-events:none}
+#top>*{pointer-events:auto}
+.brand{font-weight:800;font-size:13px;color:var(--bt);background:var(--card);border:1.5px solid var(--line);border-radius:999px;padding:5px 14px}
+.tp{display:flex;gap:8px}
+.pl{font:inherit;font-weight:700;font-size:13px;color:var(--bt);background:var(--card);border:1.5px solid var(--line);border-radius:999px;padding:5px 14px;cursor:pointer}
+.hero{position:relative;min-height:100vh;min-height:100svh;overflow:hidden}
+.vt{position:absolute;left:14px;top:70px;writing-mode:vertical-rl;transform:rotate(180deg);font-weight:800;font-size:clamp(56px,12vw,104px);line-height:.95;color:var(--blue);letter-spacing:-.02em;animation:vin 1s .1s both}
+.cap{position:absolute;left:clamp(92px,15vw,150px);top:96px;width:min(36vw,260px);font-size:13px;line-height:1.3;color:var(--bt);font-weight:500;animation:fin 1s .6s both}
+.pill{display:inline-block;border:1.5px solid var(--blue);color:var(--bt);border-radius:999px;padding:6px 18px;font-weight:700;font-size:14px;background:transparent}
+.hp{position:absolute;right:18px;top:78px;animation:fin 1s .8s both}
+.fw{position:absolute;right:-12%;top:12%;width:min(92vw,560px);animation:grow 1.4s .2s cubic-bezier(.2,.8,.2,1) both}
+.fw svg,.fb svg{width:100%;height:auto;display:block;transform-origin:50% 35%;animation:sway 9s ease-in-out infinite}
+.fb{position:absolute;left:-6%;top:34%;width:min(60vw,330px);opacity:.9;animation:grow 1.6s .5s cubic-bezier(.2,.8,.2,1) both}
+.fb svg{animation-delay:-4s}
+.sc{position:absolute;left:-2vw;bottom:6vh;font-family:"Great Vibes",cursive;font-size:clamp(88px,26vw,230px);line-height:.9;color:var(--blue);white-space:nowrap;z-index:2;animation:wipe 1.6s .9s cubic-bezier(.6,0,.2,1) both;pointer-events:none}
+.d2{position:absolute;right:20px;bottom:14vh;display:flex;flex-direction:column;gap:6px}
+.d2 i{width:10px;height:10px;border-radius:50%;background:var(--gold)}
+.hc{position:absolute;left:18px;bottom:calc(6vh + clamp(100px,20vw,190px));display:flex;gap:8px;flex-wrap:wrap;z-index:3;animation:fin 1s 1.4s both}
+.hc button{font:inherit;cursor:pointer;background:var(--card)}
+@keyframes vin{from{opacity:0;transform:rotate(180deg) translateY(-40px)}}
+@keyframes fin{from{opacity:0;transform:translateY(12px)}}
+@keyframes grow{from{opacity:0;transform:scale(.7) rotate(-12deg)}}
+@keyframes sway{50%{transform:rotate(4deg) translateY(-8px)}}
+@keyframes wipe{from{clip-path:inset(0 100% 0 0)}to{clip-path:inset(0 0 0 0)}}
+.sec{max-width:1040px;margin:0 auto;padding:70px 18px 20px}
+.sh{display:flex;align-items:flex-end;gap:14px;flex-wrap:wrap;margin-bottom:6px}
+.sh h2{font-family:"Great Vibes",cursive;font-weight:400;font-size:clamp(54px,11vw,96px);line-height:1;color:var(--blue)}
+.sh .pill{margin-bottom:14px}
+.sub{color:var(--mut);max-width:62ch;margin-bottom:16px}
+.note{border:1.5px dashed var(--blue);border-radius:16px;padding:10px 14px;font-size:14px;color:var(--mut);margin-bottom:16px}
+.note b{color:var(--bt)}
+.ov{display:grid;grid-template-columns:repeat(auto-fit,minmax(170px,1fr));gap:10px}
+.ovc{font:inherit;text-align:left;cursor:pointer;background:var(--pale);color:var(--ink);border:1.5px solid var(--line);border-radius:20px;padding:14px 16px;transition:transform .2s,box-shadow .2s}
+.ovc:hover{transform:translateY(-4px);box-shadow:var(--sh)}
+.ovc b{display:block;font-size:17px;font-weight:800;color:var(--bt)}
+.ovc span{font-size:13px;color:var(--mut)}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:14px}
+.fc{font:inherit;color:inherit;background:none;border:0;padding:0;height:170px;perspective:900px;cursor:pointer;text-align:center}
+.fi{position:relative;display:block;width:100%;height:100%;transition:transform .65s cubic-bezier(.3,.8,.3,1);transform-style:preserve-3d}
+.fc.on .fi{transform:rotateY(180deg)}
+.ff,.fk{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:6px;padding:12px;border-radius:22px;backface-visibility:hidden;-webkit-backface-visibility:hidden;border:1.5px solid var(--line)}
+.ff{background:var(--card);box-shadow:var(--sh)}
+.ff b{font-size:clamp(20px,3.4vw,25px);font-weight:800;color:var(--ink);line-height:1.15}
+.ff em{font-style:normal;color:var(--bt);font-size:14px}
+.ff i{font-style:normal;font-size:12px;font-weight:700;color:var(--bt);border:1.2px solid var(--blue);border-radius:999px;padding:0 10px}
+.ff u{position:absolute;top:8px;right:12px;text-decoration:none;font-weight:800;color:var(--coral)}
+.fk{transform:rotateY(180deg);background:var(--pale)}
+.fk b{font-size:19px;font-weight:800;color:var(--ink);line-height:1.25}
+.fk small{font-size:12.5px;color:var(--mut);line-height:1.35}
+.fc:focus-visible,.opt:focus-visible,.pl:focus-visible,.ovc:focus-visible,.btn:focus-visible{outline:3px solid var(--bt);outline-offset:3px}
+.fc:hover .fi{filter:drop-shadow(0 6px 10px rgba(60,140,180,.2))}
+.btn{font:inherit;font-weight:700;cursor:pointer;background:var(--blue);color:#0f2a3a;border:0;border-radius:999px;padding:10px 24px;font-size:15px;transition:transform .15s}
+.btn:hover{transform:translateY(-2px)}
+.btn.g{background:transparent;border:1.5px solid var(--blue);color:var(--bt)}
+.qc{background:var(--card);border:1.5px solid var(--line);border-radius:24px;padding:18px;margin-bottom:14px;box-shadow:var(--sh)}
+.qn{font-family:"Great Vibes",cursive;font-size:38px;line-height:1;color:var(--blue)}
+.qt{font-size:clamp(18px,3vw,22px);font-weight:700;margin:2px 0 12px}
+.bl{display:inline-block;min-width:80px;border-bottom:3px solid var(--blue);margin:0 3px}
+.op{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:10px}
+.opt{font:inherit;font-weight:700;font-size:16px;text-align:left;cursor:pointer;background:var(--pale);color:var(--ink);border:2px solid transparent;border-radius:16px;padding:11px 14px;display:flex;gap:10px;align-items:center;transition:transform .15s,border-color .15s}
+.opt em{font-style:normal;font-weight:800;color:var(--bt)}
+.opt:hover:not(:disabled){transform:translateY(-2px);border-color:var(--blue)}
+.opt.ok{background:var(--okbg);border-color:var(--ok);color:var(--ok);animation:pop .35s}
+.opt.no{background:var(--nobg);border-color:var(--no);color:var(--no);animation:shk .35s}
+.opt:disabled{cursor:default}
+@keyframes pop{50%{transform:scale(1.04)}}@keyframes shk{25%{transform:translateX(-6px)}75%{transform:translateX(6px)}}
+.ex{margin-top:12px;border-radius:16px;padding:12px 14px;font-size:15px;display:grid;gap:6px;animation:fin .4s both}
+.ex.ok{background:var(--okbg)}.ex.no{background:var(--nobg)}
+.ex[hidden]{display:none}
+.ex mark{background:var(--blue);color:#0f2a3a;border-radius:6px;padding:0 6px;font-weight:700}
+.ex small{color:var(--mut);font-size:13.5px}
+.res{text-align:center;border:1.5px solid var(--line);border-radius:28px;padding:30px 18px;background:var(--pale)}
+.res .big{font-family:"Great Vibes",cursive;font-size:clamp(70px,18vw,130px);line-height:1;color:var(--bt)}
+.rv{opacity:0;transform:translateY(26px);transition:opacity .7s ease,transform .7s cubic-bezier(.2,.8,.2,1);transition-delay:calc(var(--i,0)*45ms)}
+.rv.in{opacity:1;transform:none}
+footer{text-align:center;color:var(--mut);font-size:13px;padding:30px 18px 50px}
+@media(max-width:600px){.hp{top:70px}.cap{top:92px}}
+@media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}.rv{opacity:1;transform:none}html{scroll-behavior:auto}}
+</style>
+</head>
+<body>
+<svg width="0" height="0" style="position:absolute"><defs>
+<linearGradient id="pg" x1="0" y1="1" x2="0" y2="0"><stop offset="0" stop-color="#f7b9bd"/><stop offset=".55" stop-color="#ee7f8b"/><stop offset="1" stop-color="#e2495f"/></linearGradient>
+<linearGradient id="pq" x1="0" y1="1" x2="0" y2="0"><stop offset="0" stop-color="#fbd3d1"/><stop offset="1" stop-color="#f19aa0"/></linearGradient>
+<g id="pt"><path d="M100 104C62 86 50 38 76 14 88 8 96 14 100 22 104 14 112 8 124 14 150 38 138 86 100 104Z" fill="url(#pg)"/><path d="M100 96V30M92 90 80 42M108 90 120 42" stroke="#fff" stroke-opacity=".28" stroke-width="2" fill="none"/></g>
+<g id="pb"><path d="M100 104C62 86 50 38 76 14 88 8 96 14 100 22 104 14 112 8 124 14 150 38 138 86 100 104Z" fill="url(#pq)"/></g>
+<symbol id="cos" viewBox="0 0 200 200"><g transform="translate(100 100) rotate(22) scale(.9) translate(-100 -100)"><use href="#pb"/><use href="#pb" transform="rotate(45 100 100)"/><use href="#pb" transform="rotate(90 100 100)"/><use href="#pb" transform="rotate(135 100 100)"/><use href="#pb" transform="rotate(180 100 100)"/><use href="#pb" transform="rotate(225 100 100)"/><use href="#pb" transform="rotate(270 100 100)"/><use href="#pb" transform="rotate(315 100 100)"/></g><use href="#pt"/><use href="#pt" transform="rotate(45 100 100)"/><use href="#pt" transform="rotate(90 100 100)"/><use href="#pt" transform="rotate(135 100 100)"/><use href="#pt" transform="rotate(180 100 100)"/><use href="#pt" transform="rotate(225 100 100)"/><use href="#pt" transform="rotate(270 100 100)"/><use href="#pt" transform="rotate(315 100 100)"/><circle cx="100" cy="100" r="14" fill="#f3c64f"/><circle cx="100" cy="100" r="5" fill="#e2495f"/><g fill="#d9a62f"><circle cx="92" cy="94" r="2"/><circle cx="108" cy="95" r="2"/><circle cx="94" cy="108" r="2"/><circle cx="107" cy="108" r="2"/></g></symbol>
+</defs></svg>
+<div class="bgf" id="bgf"><svg viewBox="0 0 200 200"><use href="#cos"/></svg></div>
+<div id="bar"></div>
+<div id="top"><span class="brand">✦ | toeic.vocab</span><div class="tp"><button class="pl" id="sc" onclick="go('#quiz')">Đúng 0, đã làm 0/60</button><button class="pl" id="snd" aria-pressed="true">Âm thanh: bật</button></div></div>
+
+<main>
+<section class="hero">
+<div class="vt">power of</div>
+<p class="cap">Nắm chắc 60 từ vựng cốt lõi của 5 chủ đề TOEIC bằng flashcard và bài review có giải thích.</p>
+<div class="hp"><span class="pill">TOEIC Lesson 1 to 5</span></div>
+<div class="fb"><svg viewBox="0 0 200 200"><use href="#cos"/></svg></div>
+<div class="fw"><svg viewBox="0 0 400 640"><path d="M215 240C204 340 252 450 218 640" stroke="#7aa35f" stroke-width="6" fill="none" stroke-linecap="round"/><path d="M230 430C262 408 292 410 322 388 304 428 268 448 230 430Z" fill="#8cb572"/><path d="M205 330C176 318 150 322 128 300 152 340 182 350 205 330Z" fill="#8cb572"/><g transform="rotate(-10 200 200)"><use href="#cos" x="40" y="30" width="320" height="320"/></g></svg></div>
+<div class="d2"><i></i><i></i></div>
+<div class="hc"><button class="pill" onclick="go('#cards')">Flashcard 60 từ</button><button class="pill" onclick="go('#quiz')">Bài review 60 câu</button></div>
+<div class="sc">Vocabulary</div>
+</section>
+
+<section class="sec" id="cards">
+<div class="sh rv"><h2>Flashcard</h2><span class="pill">60 từ</span></div>
+<p class="sub rv">Chạm vào thẻ để lật: mặt trước là từ, loại từ và phiên âm; mặt sau là nghĩa và từ cùng họ.</p>
+<div class="note rv"><b>Dấu + trên thẻ</b> là từ bổ sung: có trong bài test nhưng chưa có trong bảng từ vựng gốc (bảng gốc chỉ có 49 từ). Phiên âm và nghĩa của 11 từ này do mình bổ sung, bạn nên đối chiếu lại với giáo trình.</div>
+<div class="ov" id="ov"></div>
+</section>
+<div id="lessons"></div>
+
+<section class="sec" id="quiz">
+<div class="sh rv"><h2>Review test</h2><span class="pill">60 câu</span></div>
+<p class="sub rv">Chọn đáp án để hiện ngay kết quả, câu hoàn chỉnh, nghĩa của từ đúng và họ từ. Có âm thanh khi chọn đúng hoặc sai.</p>
+<div id="qz"></div>
+<div class="res rv" id="res" hidden></div>
+</section>
+<footer>TOEIC Vocabulary: Lesson 1 to 5</footer>
+</main>
+
+<script>
+const $=s=>document.querySelector(s);
+function go(s){$(s).scrollIntoView({behavior:"smooth"})}
+/* Âm thanh chỉ khi chọn đúng/sai */
+let AC,mute=false;const sb=$("#snd");
+sb.onclick=()=>{mute=!mute;sb.textContent="Âm thanh: "+(mute?"tắt":"bật");sb.setAttribute("aria-pressed",!mute)};
+function snd(ok){if(mute)return;try{AC=AC||new(window.AudioContext||window.webkitAudioContext)();const t=AC.currentTime;(ok?[[660,0],[880,.12],[1175,.24]]:[[210,0],[150,.16]]).forEach(([f,d])=>{const o=AC.createOscillator(),g=AC.createGain();o.type=ok?"sine":"triangle";o.frequency.value=f;g.gain.setValueAtTime(.0001,t+d);g.gain.exponentialRampToValueAtTime(.2,t+d+.02);g.gain.exponentialRampToValueAtTime(.0001,t+d+(ok?.22:.3));o.connect(g).connect(AC.destination);o.start(t+d);o.stop(t+d+.35)})}catch(e){}}
+/* Dữ liệu từ vựng: từ|loại|IPA|nghĩa|họ từ|+ (từ bổ sung) */
+const LS=[["Contracts","Hợp đồng",`abide by|v|/əˈbaɪd baɪ/|Tuân thủ, tuân theo|abiding (adj): kéo dài, lâu dài
+agreement|n|/əˈɡriːmənt/|Sự thỏa thuận, hợp đồng|agree (v), agreeable (adj)
+assurance|n|/əˈʃʊrəns/|Sự đảm bảo, quả quyết|assure (v), assuredly (adv)
+cancellation|n|/ˌkænsəˈleɪʃn/|Sự hủy bỏ|cancel (v), canceled (adj)
+determine|v|/dɪˈtɜːrmɪn/|Xác định, định rõ, quyết định|determination (n), determined (adj)
+engage|v|/ɪnˈɡeɪdʒ/|Tham gia vào, thu hút|engagement (n), engaging (adj)
+establish|v|/ɪˈstæblɪʃ/|Thiết lập, thành lập|establishment (n), established (adj)
+obligate|v|/ˈɑːblɪɡeɪt/|Bắt buộc, ép buộc|obligation (n), obligatory (adj)
+party|n|/ˈpɑːrti/|Bên (trong hợp đồng), đảng phái|parties (số nhiều)
+provision|n|/prəˈvɪʒn/|Điều khoản (hợp đồng), sự cung cấp|provide (v), provider (n)
+resolve|v|/rɪˈzɑːlv/|Giải quyết (vấn đề)|resolution (n), resolved (adj)
+specific|adj|/spəˈsɪfɪk/|Cụ thể, rõ ràng|specify (v), specifically (adv)`],
+["Marketing","Tiếp thị",`attract|v|/əˈtrækt/|Thu hút, hấp dẫn|attraction (n), attractive (adj)
+compare|v|/kəmˈper/|So sánh, đối chiếu|comparison (n), comparable (adj)
+competition|n|/ˌkɑːmpəˈtɪʃn/|Sự cạnh tranh, cuộc thi|compete (v), competitive (adj)
+consume|v|/kənˈsuːm/|Tiêu dùng, tiêu thụ|consumer (n), consumption (n)
+convince|v|/kənˈvɪns/|Thuyết phục|convincing (adj)
+market|v/n|/ˈmɑːrkɪt/|Tiếp thị, quảng bá (v) / Thị trường (n)|marketing (n), marketable (adj)|+
+persuasion|n|/pərˈsweɪʒn/|Sự thuyết phục|persuade (v), persuasive (adj)|+
+satisfaction|n|/ˌsætɪsˈfækʃn/|Sự hài lòng|satisfy (v), satisfactory (adj)|+
+strategy|n|/ˈstrætədʒi/|Chiến lược|strategic (adj)|+
+substitution|n|/ˌsʌbstɪˈtuːʃn/|Sự thay thế|substitute (n/v)|+
+fad|n|/fæd/|Mốt nhất thời, trào lưu ngắn hạn|—|+
+inspiration|n|/ˌɪnspəˈreɪʃn/|Nguồn cảm hứng|inspire (v), inspiring (adj)|+`],
+["Warranties","Bảo hành",`characteristic|n/adj|/ˌkærəktəˈrɪstɪk/|Đặc điểm (n) / Tiêu biểu (adj)|characterize (v), characteristically (adv)
+consequence|n|/ˈkɑːnsəkwens/|Hậu quả, kết quả|consequent (adj), consequently (adv)
+consider|v|/kənˈsɪdər/|Cân nhắc, xem xét|consideration (n), considerable (adj)
+cover|v|/ˈkʌvər/|Bao gồm, chi trả, bảo hiểm|coverage (n)
+expiration|n|/ˌekspəˈreɪʃn/|Sự hết hạn|expire (v)
+frequently|adv|/ˈfriːkwəntli/|Thường xuyên|frequent (adj), frequency (n)
+imply|v|/ɪmˈplaɪ/|Ngụ ý, hàm ý|implication (n)
+promise|n/v|/ˈprɑːmɪs/|Lời hứa (n) / Hứa hẹn (v)|promising (adj)
+protect|v|/prəˈtekt/|Bảo vệ, che chở|protection (n), protective (adj)
+reputation|n|/ˌrepjuˈteɪʃn/|Danh tiếng|reputable (adj), reputed (adj)
+require|v|/rɪˈkwaɪər/|Yêu cầu, đòi hỏi|requirement (n)
+variety|n|/vəˈraɪəti/|Sự đa dạng|vary (v), various (adj)`],
+["Business Planning","Hoạch định kinh doanh",`address|v/n|/əˈdres/|Giải quyết, trình bày (v) / Địa chỉ (n)|—
+avoid|v|/əˈvɔɪd/|Tránh, tránh xa|avoidance (n), avoided (adj)
+demonstrate|v|/ˈdemənstreɪt/|Chứng minh, biểu diễn|demonstration (n), demonstrative (adj)
+develop|v|/dɪˈveləp/|Phát triển, mở rộng|development (n), developer (n)
+evaluate|v|/ɪˈvæljueɪt/|Đánh giá|evaluation (n), evaluator (n)
+gather|v|/ˈɡæðər/|Thu thập, tập hợp|gathering (n)
+offer|v/n|/ˈɔːfər/|Đề nghị, cung cấp|offering (n)
+primarily|adv|/praɪˈmerəli/|Chủ yếu, trước hết|primary (adj)
+productive|adj|/prəˈdʌktɪv/|Có năng suất, hiệu quả|produce (v), productivity (n)|+
+risk|n/v|/rɪsk/|Rủi ro (n) / Liều (v)|risky (adj)|+
+strong|adj|/strɔːŋ/|Mạnh, vững|strength (n), strengthen (v)|+
+currently|adv|/ˈkɜːrəntli/|Hiện nay, hiện tại|current (adj)|+`],
+["Conferences","Hội nghị",`accommodate|v|/əˈkɑːmədeɪt/|Cung cấp chỗ, đáp ứng|accommodation (n), accommodating (adj)
+arrangement|n|/əˈreɪndʒmənt/|Sự sắp xếp, chuẩn bị|arrange (v), arranged (adj)
+association|n|/əˌsoʊsiˈeɪʃn/|Hiệp hội, sự liên kết|associate (v), associated (adj)
+attend|v|/əˈtend/|Tham dự, có mặt|attendee (n), attendance (n)
+get in touch|v|/ɡet ɪn tʌtʃ/|Liên lạc, giữ liên lạc|—
+hold|v|/hoʊld/|Tổ chức (họp), chứa đựng|—
+location|n|/loʊˈkeɪʃn/|Địa điểm, vị trí|locate (v), located (adj)
+overcrowded|adj|/ˌoʊvərˈkraʊdɪd/|Quá đông đúc, chật ních|overcrowd (v)
+register|v/n|/ˈredʒɪstər/|Đăng ký (v) / Sổ sách (n)|registration (n)
+select|v/adj|/sɪˈlekt/|Lựa chọn (v) / Đặc biệt (adj)|selection (n), selective (adj)
+session|n|/ˈseʃn/|Phiên họp, buổi họp|—
+take part in|v|/teɪk pɑːrt ɪn/|Tham gia vào|—`]];
+const V={};
+$("#ov").innerHTML=LS.map((l,i)=>`<button class="ovc rv" style="--i:${i}" onclick="go('#l${i}')"><b>Lesson ${i+1}</b><span>${l[0]}, ${l[1]}</span></button>`).join("")+`<button class="ovc rv" style="--i:5" onclick="go('#quiz')"><b>Review test</b><span>60 câu có giải thích</span></button>`;
+$("#lessons").innerHTML=LS.map((l,i)=>{const w=l[2].split("\n").map(x=>x.split("|"));w.forEach(x=>V[x[0].toLowerCase()]=x);
+return `<section class="sec" id="l${i}" style="padding-top:44px"><div class="sh rv"><h2>${l[0]}</h2><span class="pill">Lesson ${i+1}</span><button class="btn g" style="margin-bottom:14px" data-f="${i}">Lật tất cả</button></div><p class="sub rv">${l[1]}: ${w.length} từ vựng.</p><div class="grid">${w.map((x,j)=>`<button class="fc rv" style="--i:${j%6}" aria-label="Thẻ từ vựng ${x[0]}"><span class="fi"><span class="ff">${x[5]?"<u>+</u>":""}<i>${x[1]}</i><b>${x[0]}</b><em>${x[2]}</em></span><span class="fk"><b>${x[3]}</b><small>${x[4]==="—"?"Chưa có từ cùng họ trong bảng":"Họ từ: "+x[4]}</small></span></span></button>`).join("")}</div></section>`}).join("");
+document.querySelectorAll(".fc").forEach(c=>c.onclick=()=>c.classList.toggle("on"));
+document.querySelectorAll("[data-f]").forEach(b=>b.onclick=()=>{const cs=[...$("#l"+b.dataset.f).querySelectorAll(".fc")],on=cs.some(c=>!c.classList.contains("on"));cs.forEach(c=>c.classList.toggle("on",on));b.textContent=on?"Úp tất cả":"Lật tất cả"});
+
+/* Bài review 60 câu */
+const KEY="CBDABCADCABDACBDCABCDABCADCBADCABDCBADCBACDBACBDABCDACBDCABD";
+const NT={15:"“risk” cũng có thể đi với câu này, nhưng đề chọn competition (thị trường smartphone có sự cạnh tranh cao).",30:"“currently” cũng đúng về ngữ pháp, nhưng frequently hợp nhất với “travels to London for work”.",37:"“consider” nghe cũng hợp lý, nhưng đề chọn address (giải quyết, đáp ứng nhu cầu của khách hàng).",47:"“productive” cũng có thể đi với leader, nhưng đề chọn strong."};
+const QS=`We must ___ the rules of the contract.|attract|gather|abide by|hold
+They signed an ___ yesterday.|session|agreement|consequence|inspiration
+He gave me his ___ that it would work.|reputation|arrangement|competition|assurance
+The ___ of the flight made me angry.|cancellation|substitution|location|fad
+We need to ___ the cause of the problem.|consume|determine|imply|register
+She likes to ___ in community activities.|convince|cover|engage|evaluate
+They want to ___ a new company.|establish|protect|address|accommodate
+The law will ___ employers to pay on time.|avoid|demonstrate|select|obligate
+The third ___ in this contract is the bank.|variety|strategy|party|association
+There is a special ___ about overtime pay.|provision|satisfaction|promise|arrangement
+We must ___ this dispute quickly.|compare|resolve|consider|develop
+Please give me a ___ example.|productive|strong|overcrowded|specific
+The bright colors ___ many customers.|attract|gather|hold|determine
+Let’s ___ the prices of these two phones.|engage|avoid|compare|take part in
+The ___ in the smartphone market is high.|provision|competition|risk|session
+Big trucks ___ a lot of fuel.|establish|evaluate|register|consume
+I tried to ___ my boss to give me a raise.|obligate|imply|convince|select
+___, we have 50 employees.|Currently|Frequently|Primarily|Specifically
+That toy was just a short-lived ___.|agreement|fad|consequence|location
+Nature is my ___ for painting.|assurance|reputation|inspiration|substitution
+They want to ___ their product to teens.|resolve|protect|attend|market
+It takes a lot of ___ to change his mind.|persuasion|cancellation|expiration|arrangement
+Our team was very ___ and finished early.|specific|productive|strong|overcrowded
+Customer ___ is our top priority.|party|variety|satisfaction|strategy
+A key ___ of this laptop is its light weight.|characteristic|competition|promise|association
+Losing your job is a bad ___.|provision|inspiration|location|consequence
+Please ___ all your options carefully.|attract|avoid|consider|accommodate
+The warranty will ___ the cost of repairs.|compare|cover|demonstrate|get in touch
+Check the ___ date on the milk.|expiration|agreement|satisfaction|session
+He ___ travels to London for work.|currently|primarily|carefully|frequently
+Her smile seemed to ___ that she agreed.|consume|develop|imply|register
+He made a ___ to help me.|promise|party|fad|strategy
+Sunscreen helps to ___ your skin.|convince|protect|gather|hold
+This restaurant has an excellent ___.|assurance|persuasion|arrangement|reputation
+The job will ___ excellent English skills.|determine|market|require|evaluate
+The store sells a ___ of fresh fruits.|cancellation|variety|consequence|substitution
+We must ___ the needs of our clients.|address|engage|consider|select
+You should ___ eating too much sugar.|establish|cover|attend|avoid
+The chart will ___ the drop in sales.|resolve|imply|demonstrate|accommodate
+We want to ___ a new marketing plan.|obligate|develop|promise|take part in
+The teacher will ___ your final project.|evaluate|compare|protect|register
+We need to ___ more information.|attract|require|gather|get in touch
+The company will ___ him a good job.|consume|imply|hold|offer
+This book is ___ designed for children.|currently|primarily|frequently|strongly
+Expanding the business is a big ___.|risk|competition|characteristic|association
+We need a good ___ to win.|agreement|inspiration|strategy|reputation
+He is a very ___ leader.|productive|strong|overcrowded|specific
+Tofu is a great ___ for meat.|provision|variety|location|substitution
+The hotel can ___ 500 guests.|accommodate|determine|convince|address
+We made the seating ___.|cancellation|arrangement|expiration|strategy
+She joined the medical ___.|party|fad|association|risk
+How many people will ___ the meeting?|resolve|consider|demonstrate|attend
+Please ___ with me if you need help.|get in touch|abide by|take part in|market
+We will ___ a conference next month.|engage|cover|hold|develop
+The ___ of the new shop is perfect.|satisfaction|location|promise|substitution
+The train was very ___ this morning.|specific|productive|strong|overcrowded
+You must ___ for the event online.|establish|require|register|evaluate
+Please ___ the best answer.|select|obligate|protect|gather
+The morning ___ starts at 9 AM.|assurance|session|consequence|arrangement
+I want to ___ the sports competition.|get in touch|abide by|engage|take part in`.split("\n").map((l,i)=>{const p=l.split("|");return{n:i+1,t:p[0],o:p.slice(1),a:KEY.charCodeAt(i)-65}});
+const info=w=>{const v=V[w.toLowerCase()];return v?`<b>${v[0]}</b> (${v[1]}) ${v[2]}: ${v[3]}.${v[4]!=="—"?" Họ từ: "+v[4]+".":""}`:""};
+let done,right,fin;
+function upd(){$("#sc").textContent=`Đúng ${right}, đã làm ${done}/60`}
+function build(){done=0;right=0;fin=[];$("#res").hidden=true;
+$("#qz").innerHTML=[0,1,2].map(p=>`<div class="sh rv" style="margin-top:${p?24:0}px"><h2 style="font-size:clamp(44px,9vw,70px)">Part ${p+1}</h2><span class="pill">Câu ${p*20+1} đến ${p*20+20}</span></div>`+QS.slice(p*20,p*20+20).map(q=>`<article class="qc rv" id="q${q.n}"><div class="qn">Q${q.n}</div><p class="qt">${q.t.replace("___",'<span class="bl"></span>')}</p><div class="op">${q.o.map((o,k)=>`<button class="opt" data-k="${k}"><em>${"ABCD"[k]}.</em>${o}</button>`).join("")}</div><div class="ex" hidden></div></article>`).join("")).join("");
+QS.forEach(q=>{const el=$("#q"+q.n);el.querySelectorAll(".opt").forEach(b=>b.onclick=()=>{const k=+b.dataset.k,ok=k===q.a,ans=q.o[q.a];
+el.querySelectorAll(".opt").forEach(x=>{x.disabled=true;if(+x.dataset.k===q.a)x.classList.add("ok")});if(!ok)b.classList.add("no");
+done++;if(ok)right++;fin[q.n]=ok;snd(ok);upd();
+const ex=el.querySelector(".ex");ex.hidden=false;ex.className="ex "+(ok?"ok":"no");
+ex.innerHTML=`<div><b style="color:var(--${ok?"ok":"no"})">${ok?"Chính xác!":"Chưa đúng."}</b> Đáp án: <b>${"ABCD"[q.a]}. ${ans}</b></div><div>“${q.t.replace("___",`<mark>${ans}</mark>`)}”</div><div>${info(ans)}</div>${!ok&&info(q.o[k])?`<small>Bạn chọn ${info(q.o[k])} Nghĩa này không hợp với ngữ cảnh của câu.</small>`:""}${NT[q.n]?`<small>Lưu ý: ${NT[q.n]}</small>`:""}`;
+if(done===60)finish()})});reveal()}
+function finish(){const r=$("#res");r.hidden=false;const bad=QS.filter(q=>!fin[q.n]).map(q=>q.n);
+r.innerHTML=`<div class="big">${right}/60</div><h3>${right>50?"Bạn đã nắm rất vững các từ vựng này!":right>=36?"Khá tốt, ôn lại các câu sai nhé.":"Hãy xem lại flashcard rồi làm lại nhé."}</h3><p class="sub" style="margin:6px auto 14px">${bad.length?"Cần xem lại câu: "+bad.join(", ")+".":"Bạn không sai câu nào."}</p><button class="btn" id="rs">Làm lại</button> <button class="btn g" onclick="go('#cards')">Ôn lại flashcard</button>`;
+r.classList.add("in");$("#rs").onclick=()=>{build();upd();go("#quiz")};setTimeout(()=>r.scrollIntoView({behavior:"smooth",block:"center"}),600)}
+/* Hiệu ứng cuộn */
+const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add("in");io.unobserve(e.target)}}),{threshold:.12});
+function reveal(){document.querySelectorAll(".rv:not(.in)").forEach(e=>io.observe(e))}
+build();upd();
+const bar=$("#bar"),bg=$("#bgf");
+function sc(){const h=document.documentElement,p=scrollY/(h.scrollHeight-innerHeight||1);bar.style.transform=`scaleX(${p})`;bg.style.transform=`translateY(${-scrollY*.12}px) rotate(${scrollY*.03}deg)`}
+addEventListener("scroll",sc,{passive:true});sc();
+</script>
+</body>
+</html>
